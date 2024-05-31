@@ -1,21 +1,20 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'app/app.dart';
+import 'di/injectable.dart';
 
-import 'home_page.dart';
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: 'Flutter Template Starter',
-      home: HomePage(),
-    );
-  }
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await configureDependencies();
+  await EasyLocalization.ensureInitialized();
+  runApp(
+    EasyLocalization(
+      path: 'assets/translations',
+      supportedLocales: const [Locale('en'), Locale('es')],
+      fallbackLocale: const Locale('en'),
+      useOnlyLangCode: true,
+      child: MyApp(),
+    ),
+  );
 }
 
