@@ -1,4 +1,6 @@
 {
   "home_screen_title": "Pantalla Home",
-  "home_body_text": "Contenido Home"
+  "home_body_text": "Contenido Home",
+  "settings_sheet_title": "Configuración",
+  "theme_mode_settings_title": "Modo del Tema:"
 }

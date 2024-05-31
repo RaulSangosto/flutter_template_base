@@ -8,6 +8,14 @@ class NavigationService {
 
   static GoRouter router = GoRouter(
     initialLocation: "/${HomeScreen.routeName}",
-    routes: [],
+    routes: [
+      GoRoute(
+        name: HomeScreen.routeName,
+        path: "/${HomeScreen.routeName}",
+        builder: (context, state) =>
+            HomeScreen(routeParameters: state.pathParameters),
+        routes: const [],
+      ),
+    ],
   );
 }

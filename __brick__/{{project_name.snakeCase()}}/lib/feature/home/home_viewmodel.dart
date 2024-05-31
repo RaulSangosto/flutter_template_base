@@ -6,6 +6,7 @@ import '../../core/common/base/base_viewmodel.dart';
 import '../../core/domain/get_theme_mode_use_case.dart';
 import '../../core/domain/set_theme_mode_use_case.dart';
 
+@injectable
 class HomeViewModel extends BaseViewModel {
   final Map<String, String> routeSettings;
 

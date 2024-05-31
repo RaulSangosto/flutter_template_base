@@ -1,4 +1,6 @@
 {
   "home_screen_title": "Home Screen",
-  "home_body_text": "Home Content"
+  "home_body_text": "Home Content",
+  "settings_sheet_title": "Settings",
+  "theme_mode_settings_title": "Theme Mode:"
 }
