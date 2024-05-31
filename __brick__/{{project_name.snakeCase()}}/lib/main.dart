@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'app/app.dart';
-import 'di/injectable.dart';
+import 'app/di/injectable.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,4 +17,3 @@ void main() async {
     ),
   );
 }
-

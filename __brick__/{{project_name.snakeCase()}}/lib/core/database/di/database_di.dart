@@ -1,5 +1,5 @@
-import '../core/database/database.dart';
 import 'package:injectable/injectable.dart';
+import '../database.dart';
 
 @module
 abstract class DatabaseModule {

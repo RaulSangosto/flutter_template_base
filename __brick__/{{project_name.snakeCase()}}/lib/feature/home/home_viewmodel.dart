@@ -1,6 +1,10 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:injectable/injectable.dart';
+import '../../app/di/injectable.dart';
 import '../../core/common/base/base_viewmodel.dart';
+import '../../core/domain/get_theme_mode_use_case.dart';
+import '../../core/domain/set_theme_mode_use_case.dart';
 
 class HomeViewModel extends BaseViewModel {
   final Map<String, String> routeSettings;
@@ -17,7 +21,6 @@ class HomeViewModel extends BaseViewModel {
 
   @override
   void init() {
-    // TODO: implement init
     _themeModeSubscription = _getThemeModeUseCase().listen((data) {
       if (data != null) {
         _themeMode = data;
