@@ -1,7 +1,8 @@
-import '../core/ui/components/bottom_sheet.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import 'bottom_sheet.dart';
 
 class SettingsSheetContent extends StatelessWidget {
   final VoidCallback onChangeThemeMode;
