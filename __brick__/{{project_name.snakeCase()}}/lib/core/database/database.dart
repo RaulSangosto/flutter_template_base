@@ -1,6 +1,7 @@
+import 'dart:async';
 import 'package:floor/floor.dart';
 import 'package:sqflite/sqflite.dart' as sqflite;
-import 'dart:async';
+
 import 'dao/test/test_dao.dart';
 import 'entity/test/test_entity.dart';
 
