@@ -4,30 +4,58 @@ This is a MVVM Clean Code Flutter template with [mason](https://github.com/felan
 
 It is created as a fork of https://github.com/jhj0517/flutter_template_base using it as a base.
 
-This template includes: 
+This template includes:
+
 - Dependency Injection with GetIt
 - Room like SQLite Database abstraction with Floor
 - Shared preferences configured
 - Theme styles with Google Fonts configured
+- Font Awesome icons
 - Dark/Light Theme mode
 - Basic UI components
 - Clean code architecture with examples configured
 - MVVM with Home Screen as a example
+- Easy routes configured with Go_Router
+- Easy translations configured with Easy_localization
 
 # Project Structure
 
 The project is divided in 3 folders
 
+```
+lib
+│
+└───app
+│
+└───core
+│   └───common
+│   └───data / repository
+│   └───database
+│   │   │   dao/ entities / mappers
+│   │   │   ...
+│   └───domain
+│   │   │   usacases.dart
+│   │   │   ...
+│   └───models
+│   └───ui
+│   │   └───components
+│   │   └───theme
+└───feature
+│   └───home
+│   │   │   screen / viewmodel / components / state / events
+│   │   │   ...
+```
+
 1. app
    - This folder contains The MaterialApp of the aplication, the router and the dependency injector configuration
 2. core
    - Contains the core components of the app. It is divided in to folders for each layer:
-      - common: Contains the code that needs to be accesible from all layer of the app
-      - data: Contains the repositories of each feature
-      - database: Contains the Floor database
-      - domain: Contains the usecases
-      - model: Contains the models of all features
-      - ui: Contains the common UI Widgets to be shared by features
+     - common: Contains the code that needs to be accesible from all layer of the app
+     - data: Contains the repositories of each feature
+     - database: Contains the Floor database
+     - domain: Contains the usecases
+     - model: Contains the models of all features
+     - ui: Contains the common UI Widgets to be shared by features
 3. feature
    - This folder contains the UI of each feature/screen of the app
 
