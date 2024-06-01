@@ -1,8 +1,9 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class BottomSheetContent extends StatelessWidget {
-  final Widget title;
+  final String title;
   final List<Widget> items;
   final Widget? emptyWidget;
   const BottomSheetContent({
@@ -23,7 +24,12 @@ class BottomSheetContent extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Expanded(child: title),
+              Expanded(child: Text(
+                  title,
+                  style: Theme.of(context).textTheme.titleLarge,
+                  textAlign: TextAlign.center,
+                ).tr(),
+              ),
               IconButton(
                   onPressed: () => Navigator.pop(context),
                   icon: const FaIcon(FontAwesomeIcons.xmark))

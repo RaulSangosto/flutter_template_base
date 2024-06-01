@@ -4,10 +4,10 @@ import '../../entity/test/test_entity.dart';
 @dao
 abstract class TestDao {
   @insert
-  Future<int> insertTest(TestEntity cv);
+  Future<int> insertTest(TestEntity test);
 
   @update
-  Future<int> updateTest(TestEntity cv);
+  Future<int> updateTest(TestEntity test);
 
   @Query('SELECT * FROM TestEntity')
   Stream<List<TestEntity>?> findAllTest();

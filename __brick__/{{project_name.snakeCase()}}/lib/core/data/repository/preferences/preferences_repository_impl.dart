@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
 import 'package:rx_shared_preferences/rx_shared_preferences.dart';
-import '../../common/constants.dart';
+import '../../../common/constants.dart';
 import 'preferences_repository.dart';
 
 @Singleton(as: PreferencesRepository)

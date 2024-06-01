@@ -2,7 +2,7 @@ class TestModel {
   final int? id;
   final String title;
 
-  TestModel({this.id, required this.title});
+  TestModel({this.id, this.title = ""});
 
   TestModel copyWith({int? id, String? title}) {
     return TestModel(

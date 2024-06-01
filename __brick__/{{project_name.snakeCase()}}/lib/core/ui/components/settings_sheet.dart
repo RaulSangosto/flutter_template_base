@@ -36,11 +36,7 @@ class SettingsSheetContent extends StatelessWidget {
           onTap: onChangeThemeMode,
         ),
       ],
-      title: Text(
-        "settings_sheet_title",
-        style: Theme.of(context).textTheme.titleLarge,
-        textAlign: TextAlign.center,
-      ).tr(),
+      title: "settings_sheet_title",
     );
   }
 
