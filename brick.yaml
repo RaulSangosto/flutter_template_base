@@ -1,7 +1,7 @@
-name: flutter_template_base
-description: Flutter Template base
+name: flutter_template_mvvm_clean
+description: Flutter MVVM Clean Code Template
 
-version: 0.6.0
+version: 0.7.0
 
 environment:
   mason: ">=0.1.0-dev.52 <0.1.0"
@@ -25,5 +25,5 @@ vars:
   description:
     type: string
     description: Project description
-    default: Flutter Template Base
+    default: Flutter MVVM Clean Code Template
     prompt: What is the project description?
