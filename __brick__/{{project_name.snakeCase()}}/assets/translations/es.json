@@ -1,6 +1,12 @@
 {
   "home_screen_title": "Pantalla Home",
   "home_body_text": "Contenido Home",
+  "test_edit_sheet_title": "Editar Test",
+  "test_label_edit_field": "título Test",
+  "test_hint_edit_field": "Título nuevo Test",
+  "test_edit_sheet_btn": "Guardar Cambios",
+  "test_add_sheet_btn": "Añadir Test",
+  "home_empty_widget_title": "No hay Tests. Agrega uno para comenzar.",
   "settings_sheet_title": "Configuración",
   "theme_mode_settings_title": "Modo del Tema:"
 }

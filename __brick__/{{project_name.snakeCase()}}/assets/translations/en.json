@@ -1,6 +1,12 @@
 {
   "home_screen_title": "Home Screen",
   "home_body_text": "Home Content",
+  "home_empty_widget_title": "There are no tests. Add one to start.",
+  "test_edit_sheet_title": "Edit Test",
+  "test_label_edit_field": "Test title",
+  "test_hint_edit_field": "New Test title",
+  "test_edit_sheet_btn": "Save Changes",
+  "test_add_sheet_btn": "Add Test",
   "settings_sheet_title": "Settings",
   "theme_mode_settings_title": "Theme Mode:"
 }

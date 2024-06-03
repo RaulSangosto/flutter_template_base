@@ -1,4 +1,4 @@
-import 'package:example_project_name2/core/model/test/test_model.dart';
+import '../../../core/model/test/test_model.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
