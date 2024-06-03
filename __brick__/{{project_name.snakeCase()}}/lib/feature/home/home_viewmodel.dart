@@ -24,7 +24,7 @@ class HomeViewModel extends BaseViewModel {
   final AddTestUseCase _addTestUseCase = getIt<AddTestUseCase>();
   final DeleteTestUseCase _deleteTestUseCase = getIt<DeleteTestUseCase>();
 
-  HomeState _state = HomeState();
+  HomeState _state = const HomeState();
   HomeState get state => _state;
 
   StreamSubscription<ThemeMode?>? _themeModeSubscription;

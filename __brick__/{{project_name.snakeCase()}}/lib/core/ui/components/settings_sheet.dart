@@ -15,27 +15,33 @@ class SettingsSheetContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BottomSheetContent(
-      items: [
-        ListTile(
-          leading: const FaIcon(FontAwesomeIcons.circleHalfStroke),
-          trailing: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Text(
-                themeMode.name.toUpperCase(),
-                style: Theme.of(context).textTheme.bodyMedium,
-              ),
-              const SizedBox.square(
-                dimension: 10,
-              ),
-              FaIcon(getIconFromThemeMode(themeMode))
-            ],
-          ),
-          title: const Text("theme_mode_settings_title").tr(),
-          onTap: onChangeThemeMode,
+    final items = [
+      ListTile(
+        leading: const FaIcon(FontAwesomeIcons.circleHalfStroke),
+        trailing: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              themeMode.name.toUpperCase(),
+              style: Theme.of(context).textTheme.bodyMedium,
+            ),
+            const SizedBox.square(
+              dimension: 10,
+            ),
+            FaIcon(getIconFromThemeMode(themeMode))
+          ],
         ),
-      ],
+        title: const Text("theme_mode_settings_title").tr(),
+        onTap: onChangeThemeMode,
+      ),
+    ];
+    return BottomSheetContent(
+      content: ListView.separated(
+        padding: const EdgeInsets.symmetric(vertical: 10),
+        itemCount: items.length,
+        itemBuilder: (context, index) => items[index],
+        separatorBuilder: (context, index) => const Divider(),
+      ),
       title: "settings_sheet_title",
     );
   }

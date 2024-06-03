@@ -42,29 +42,31 @@ class _TestEditBottomSheetState extends State<TestEditBottomSheet> {
 
   @override
   Widget build(BuildContext context) {
-    return BottomSheetContent(title: "test_edit_sheet_title", items: [
-      Form(
-          child: Column(
-        children: [
-          TextFormField(
-            controller: controller,
-            decoration: InputDecoration(
-              label: const Text("test_label_edit_field").tr(),
-              hintText: "test_hint_edit_field".tr(),
+    return BottomSheetContent(
+      title: "test_edit_sheet_title",
+      content: Form(
+        child: Column(
+          children: [
+            TextFormField(
+              controller: controller,
+              decoration: InputDecoration(
+                label: const Text("test_label_edit_field").tr(),
+                hintText: "test_hint_edit_field".tr(),
+              ),
+              onChanged: changeTest,
+              onEditingComplete: onSave,
             ),
-            onChanged: changeTest,
-            onEditingComplete: onSave,
-          ),
-          PrimaryIconButton(
-            text: Text(test.id == null
-                    ? "test_add_sheet_btn"
-                    : "test_edit_sheet_btn")
-                .tr(),
-            icon: const FaIcon(FontAwesomeIcons.plus),
-            onPressed: onSave,
-          ),
-        ],
-      )),
-    ]);
+            PrimaryIconButton(
+              text: Text(test.id == null
+                      ? "test_add_sheet_btn"
+                      : "test_edit_sheet_btn")
+                  .tr(),
+              icon: const FaIcon(FontAwesomeIcons.plus),
+              onPressed: onSave,
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }

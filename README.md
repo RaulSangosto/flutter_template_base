@@ -41,7 +41,7 @@ lib
 │   │   └───components
 │   │   └───theme
 └───feature
-│   └───home
+│   +───home
 │   │   │   screen / viewmodel / components / state / events
 │   │   │   ...
 ```

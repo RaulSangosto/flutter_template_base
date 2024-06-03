@@ -4,13 +4,11 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class BottomSheetContent extends StatelessWidget {
   final String title;
-  final List<Widget> items;
-  final Widget? emptyWidget;
+  final Widget content;
   const BottomSheetContent({
     super.key,
-    required this.items,
     required this.title,
-    this.emptyWidget,
+    required this.content,
   });
 
   @override
@@ -24,37 +22,23 @@ class BottomSheetContent extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Expanded(child: Text(
+              Expanded(
+                child: Text(
                   title,
                   style: Theme.of(context).textTheme.titleLarge,
                   textAlign: TextAlign.center,
                 ).tr(),
               ),
               IconButton(
-                  onPressed: () => Navigator.pop(context),
-                  icon: const FaIcon(FontAwesomeIcons.xmark))
+                onPressed: () => Navigator.pop(context),
+                icon: const FaIcon(FontAwesomeIcons.xmark),
+              )
             ],
           ),
           const SizedBox(
             height: 20,
           ),
-          Expanded(
-            child: Scrollbar(
-              //trackVisibility: true,
-              thumbVisibility: true,
-              child: items.isNotEmpty
-                  ? ListView.separated(
-                      padding: const EdgeInsets.symmetric(vertical: 10),
-                      itemCount: items.length,
-                      itemBuilder: (context, index) => items[index],
-                      separatorBuilder: (context, index) => const Divider(),
-                    )
-                  : Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 50.0),
-                      child: emptyWidget,
-                    ),
-            ),
-          ),
+          Expanded(child: content),
         ],
       ),
     );

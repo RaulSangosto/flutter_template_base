@@ -80,17 +80,14 @@ class HomeScreenContent extends StatelessWidget {
         child: EmptyWidget(title: "home_empty_widget_title".tr()),
       );
     }
-    return Expanded(
-      child: ListView.separated(
-        itemBuilder: (context, index) => HomeListItem(
-          test: tests[index],
-          onClickItem: (item) =>
-              showTestEditBottomSheet(context, item, onEvent),
-          onDeleteItem: onDeleteItem,
-        ),
-        separatorBuilder: (context, index) => const Divider(),
-        itemCount: tests.length,
+    return ListView.separated(
+      itemBuilder: (context, index) => HomeListItem(
+        test: tests[index],
+        onClickItem: (item) => showTestEditBottomSheet(context, item, onEvent),
+        onDeleteItem: onDeleteItem,
       ),
+      separatorBuilder: (context, index) => const Divider(),
+      itemCount: tests.length,
     );
   }
 }
